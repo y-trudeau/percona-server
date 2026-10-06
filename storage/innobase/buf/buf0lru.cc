@@ -195,7 +195,7 @@ bool buf_LRU_evict_from_unzip_LRU(buf_pool_t *buf_pool) {
   then use the LRU.  This slack allows us to keep hot
   decompressed pages in the buffer pool. */
   if (UT_LIST_GET_LEN(buf_pool->unzip_LRU) <=
-      UT_LIST_GET_LEN(buf_pool->LRU) / 10) {
+      UT_LIST_GET_LEN(buf_pool->LRU) * srv_buffer_pool_unzip_pct / 100) {
     return false;
   }
 

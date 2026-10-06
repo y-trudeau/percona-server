@@ -447,6 +447,8 @@ const longlong srv_buf_pool_max_size = LLONG_MAX;
 /** Requested buffer pool chunk size. Each buffer pool instance consists
 of one or more chunks. */
 ulonglong srv_buf_pool_chunk_unit;
+/** Pct of pages kept uncompressed in the buffer pool */
+ulonglong srv_buffer_pool_unzip_pct;
 /** Minimum buffer pool chunk size. */
 const ulonglong srv_buf_pool_chunk_unit_min = (1024 * 1024);
 /** The buffer pool chunk size must be a multiple of this number. */

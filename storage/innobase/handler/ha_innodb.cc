@@ -23478,6 +23478,11 @@ static MYSQL_SYSVAR_ULONGLONG(
     ulonglong{srv_buf_pool_chunk_unit_max},
     ulonglong{srv_buf_pool_chunk_unit_blk_sz});
 
+static MYSQL_SYSVAR_ULONGLONG(
+    buffer_pool_unzip_pct, srv_buffer_pool_unzip_pct, PLUGIN_VAR_OPCMDARG, 
+    "Pct of buffer pool pages kept uncompressed (1-99)",
+    nullptr, nullptr, 10, 1, 99, 0);
+
 #if defined UNIV_DEBUG || defined UNIV_PERF_DEBUG
 static MYSQL_SYSVAR_ULONG(page_hash_locks, srv_n_page_hash_locks,
                           PLUGIN_VAR_OPCMDARG | PLUGIN_VAR_READONLY,

@@ -351,6 +351,9 @@ and/or load it during startup. */
 extern bool srv_buffer_pool_dump_at_shutdown;
 extern bool srv_buffer_pool_load_at_startup;
 
+/* attempt at tuning buffer pool usage */
+extern ulonglong srv_buffer_pool_unzip_pct;
+
 /* Whether to disable file system cache if it is defined */
 extern bool srv_disable_sort_file_cache;
 
