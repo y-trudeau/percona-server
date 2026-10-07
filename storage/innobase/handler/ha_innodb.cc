@@ -24489,6 +24489,7 @@ static SYS_VAR *innobase_system_variables[] = {
     MYSQL_SYSVAR(buffer_pool_dump_at_shutdown),
     MYSQL_SYSVAR(buffer_pool_in_core_file),
     MYSQL_SYSVAR(buffer_pool_dump_pct),
+    MYSQL_SYSVAR(buffer_pool_unzip_pct),
 #ifdef UNIV_DEBUG
     MYSQL_SYSVAR(buffer_pool_evict),
 #endif /* UNIV_DEBUG */
